@@ -5,4 +5,4 @@ build:
 	docker build -t $(REPOSITORY):$(VERSION) -f $(PWD)/Dockerfile $(PWD)
 
 run:
-	docker run --rm --name my-php-fpm -d $(REPOSITORY):$(VERSION)
+	docker run --rm --name my-php-fpm -d -v /Users/koga/develop/develop-env:/var/www/src $(REPOSITORY):$(VERSION)

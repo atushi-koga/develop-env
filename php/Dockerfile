@@ -11,5 +11,6 @@ WORKDIR /var/www/
 RUN mkdir -p /var/www/html \
   && touch /var/www/html/index.php \
   && echo '<?php echo "test php-fpm"; ' > /var/www/html/index.php
+  && mkdir -p /var/www/src
 
 CMD php-fpm -D -R && touch test.html && tail -f test.html
