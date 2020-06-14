@@ -29,5 +29,6 @@ jobs:
       name: default
     steps:
       - setup_remote_docker
+      - checkout
       - first_test
       - unit_test
