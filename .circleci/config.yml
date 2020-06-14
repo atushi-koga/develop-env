@@ -14,7 +14,7 @@ commands:
         type: string
         default: "Hello World"
     steps:
-      - run: echo << parameters.param1 >>
+      - run: echo << parameters.param1 >> && echo $(pwd) && ls -al
   unit_test:
     description: "ユニットテストの実行"
     steps:
