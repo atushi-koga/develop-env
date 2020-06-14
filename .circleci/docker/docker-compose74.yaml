@@ -1,0 +1,5 @@
+version:  '2'
+services:
+  web:
+    container_name: laravel
+    image: atsushikoga/php-fpm:7.4.6-fpm-alpine-v1

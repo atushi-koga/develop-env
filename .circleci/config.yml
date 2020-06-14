@@ -15,6 +15,14 @@ commands:
         default: "Hello World"
     steps:
       - run: echo << parameters.param1 >>
+  unit_test:
+    description: "ユニットテストの実行"
+    steps:
+      - run:
+          name: phpunit
+          shell: /bin/bash -Ceu -o pipefail
+          command: ./.circleci/scripts/start_script.sh
+          no_output_timeout: 3600
 jobs:
   build:
     executor:
@@ -22,3 +30,4 @@ jobs:
     steps:
       - setup_remote_docker
       - first_test
+      - unit_test
