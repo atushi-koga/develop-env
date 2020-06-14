@@ -1,7 +1,5 @@
 # /bin/bash
-echo $(pwd)
-
-cp -af .circleci/docker/docker-compose74.yml docker-compose.yml
+cp -af ./.circleci/docker/docker-compose74.yaml docker-compose.yml
 
 DOCKER_COMPOSE="docker-compose -f docker-compose.yml"
 ( $DOCKER_COMPOSE build && $DOCKER_COMPOSE up -d && $DOCKER_COMPOSE rm )
