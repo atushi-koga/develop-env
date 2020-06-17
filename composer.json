@@ -58,7 +58,7 @@
             "@php artisan key:generate --ansi"
         ],
         "phpunit": [
-            "@vendor/bin/phpunit -c phpunit.xml"
+            "php vendor/bin/phpunit -c phpunit.xml"
         ]
     }
 }
