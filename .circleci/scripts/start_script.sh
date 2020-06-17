@@ -7,3 +7,4 @@ DOCKER_COMPOSE="docker-compose -f docker-compose.yml"
 docker cp /home/circleci/src laravel:/var/www/
 docker exec -it laravel php /var/www/src/composer.phar install --no-interaction --working-dir=/var/www/src
 docker exec -it laravel php /var/www/src/composer.phar dump-autoload --working-dir=/var/www/src
+docker exec -it laravel php /var/www/src/composer.phar phpunit --working-dir=/var/www/src
