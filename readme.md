@@ -83,3 +83,7 @@ docker exec -it $(docker ps -q -f ancestor='atsushikoga/nginx:1.13-alpine') ash
 
 -- php-fpmコンテナに入る
 docker exec -it $(docker ps -q -f ancestor='atsushikoga/php-fpm:7.4.6-fpm-alpine-v1') ash
+
+### メモ
+- CI 
+CI用コンテナに設定した環境変数をPHPの$_SERVERに引き継ぐことで、.envは使わずにLaravelの環境変数を実現している。
