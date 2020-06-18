@@ -13,6 +13,7 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
+        var_dump($_SERVER['APP_KEY'] ?? '');
         $this->assertTrue(true);
     }
 }
