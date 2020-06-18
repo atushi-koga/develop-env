@@ -3,3 +3,5 @@ services:
   web:
     container_name: laravel
     image: atsushikoga/php-fpm:7.4.6-fpm-alpine-v1
+    environment:
+      - APP_KEY=base64:PwUUtrD3nEIdhPXqS0ag+lEXju/dZBBuhYJXSpRiDKA=
