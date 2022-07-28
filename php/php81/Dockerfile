@@ -35,7 +35,6 @@ MAIL_FROM_NAME="${APP_NAME}"
 
 COPY php-fpm.d/php-fpm.conf /usr/local/etc/php-fpm.d/php-fpm.conf
 COPY php/php.ini /usr/local/etc/php/php.ini
-#COPY php/php-cli.ini /usr/local/etc/php/php-cli.ini # php-src で php-8.0 の php-cli.ini が無いのでコメントアウト
 
 WORKDIR /var/www/
 
