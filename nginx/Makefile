@@ -8,4 +8,4 @@ push: build
 	docker push $(REPOSITORY):$(VERSION)
 
 run:
-	docker run --rm -p 8080:80 --link my-php-fpm:php-fpm -d $(REPOSITORY):$(VERSION)
+	docker run --rm -p 8080:80 --link my-php-fpm:php-fpm $(REPOSITORY):$(VERSION)

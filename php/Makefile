@@ -7,7 +7,7 @@ build:
 push: build
 	docker push $(REPOSITORY):$(VERSION81)
 run:
-	docker run --rm --name my-php-fpm -d -v /Users/koga/develop/develop-env/src:/var/www/src $(REPOSITORY):$(VERSION81)
+	docker run --rm --name my-php-fpm -v /Users/koga/develop/develop-env/src:/var/www/src $(REPOSITORY):$(VERSION81)
 
 build74:
 	docker build -t $(REPOSITORY):$(VERSION74) -f $(PWD)/php74/Dockerfile $(PWD)/php74
