@@ -1,10 +1,9 @@
 REPOSITORY = atsushikoga/php-fpm
 VERSION74 = 7.4.6-fpm-alpine-v1
-VERSION80 = 8.0-rc-fpm-alpine-v1
 VERSION81 = 8.1.8-fpm-alpine
 
 build:
-	docker build -t $(REPOSITORY):$(VERSION81) -f $(PWD)/php80/Dockerfile $(PWD)/php80
+	docker build -t $(REPOSITORY):$(VERSION81) -f $(PWD)/php81/Dockerfile $(PWD)/php81
 push: build
 	docker push $(REPOSITORY):$(VERSION81)
 run:
